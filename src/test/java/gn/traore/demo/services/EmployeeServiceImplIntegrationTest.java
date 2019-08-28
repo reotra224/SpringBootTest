@@ -45,5 +45,6 @@ public class EmployeeServiceImplIntegrationTest {
 	    Employee found = employeeService.getEmployeeByName(name);
 
 	    assertThat(found.getName()).isEqualTo(name);
-	 }
+	}
+
 }
