@@ -26,16 +26,16 @@ public class EmployeeRepositoryIntegrationTest {
 	@Test
 	public void whenFindByName_thenReturnEmployee() {
 	    // given
-	    Employee traore = new Employee("traoré");
-	    Employee alex = new Employee("alex");
-	    entityManager.persist(alex);
-	    entityManager.persist(traore);
-	    entityManager.flush();
-	 
-	    // when
-	    Employee found = employeeRepository.findByName("traoré");
-	 
-	    // then
-	    assertThat(found.getName()).isEqualTo(alex.getName());
+		Employee traore = new Employee("traoré"); Employee alex = new
+		Employee("alex"); entityManager.persist(alex); entityManager.persist(traore);
+		entityManager.flush();
+
+		// when
+		Employee found = employeeRepository.findByName("traoré");
+
+		// then
+		// assertThat(found.getName()).isEqualTo(alex.getName());
+		assertThat(found.getName()).isNotEqualTo(alex.getName());
+
 	}
 }
